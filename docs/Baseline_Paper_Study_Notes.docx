@@ -1,1 +1,63 @@
+The MobileNet paper proposes a lightweight convolutional neural network architecture that runs efficiently on mobile and embedded devices by drastically reducing computation while maintaining good accuracy.
 
+The Core Problem the Paper Addresses
+Before MobileNet:
+CNNs like VGG, AlexNet, Inception were:
+Very accurate
+Very large
+Very slow
+They required:
+Powerful GPUs
+High memory
+High energy
+Not practical for mobile phones, IoT devices, cameras, drones, etc.
+
+Main Goal of the Paper
+The paper asks:
+“How can we design a neural network that is fast, small, and efficient without losing much accuracy?”
+So the goal is to:
+Reduce computation
+Reduce model size
+Reduce latency
+Without heavily sacrificing performance
+
+Key Idea Introduced in the Paper
+
+The paper introduces a new type of convolution called:
+Depthwise Separable Convolution
+Instead of:
+Doing all computations in one heavy step
+MobileNet:
+Separates spatial feature extraction
+Separates channel combination
+This makes CNNs:
+Much faster
+Much lighter
+Suitable for real-world deployment
+
+
+What the Paper Proposes (Main Contributions)
+
+The baseline paper proposes:
+1: A New CNN Architecture
+Built mainly using depthwise separable convolutions
+Optimized for speed and efficiency
+
+2: Two Control Parameters
+Width Multiplier (α) → controls model size
+Resolution Multiplier (ρ) → controls input image size
+These allow users to:
+Tune accuracy vs speed
+Choose the right model for their hardware
+
+3: Extensive Experiments
+Shows MobileNet works well on:
+Image classification
+Object detection
+Face recognition
+Geolocation tasks
+
+**Compares with popular models and shows:
+Much smaller size
+Much lower computation
+Comparable accuracy
